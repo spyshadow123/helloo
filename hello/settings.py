@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q_h6g4(k^j2qjjsw)b)3cx8)rpjwi&0265ug8#y8nt5fqh^dcx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'spy123$default',
+        'USER':'spy123',
+        'PASSWORD':'aman@1234',
+        'PORT':'3306',
+        'HOST':'spy123.mysql.pythonanywhere-services.com'
     }
 }
 
@@ -117,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT='static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

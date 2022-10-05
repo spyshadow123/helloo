@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
+    integrity="sha256-97quMNaesEFsrV6uexbIR3+D1V1+75CVDXuLBFQ07lA=" crossorigin="anonymous"></script>
+</head>
+<style>
+    a:hover {
+      background-color: chartreuse;
+      font-variant: small-caps;
+      font-style: italic;
+    }
+
+    body {
+      background-color:violet;
+    }
+    .school,
+    .dj {
+      display: none;
+      border-radius: 25%;
+    }
+    .p,
+    .q{
+      display: none;
+      text-align: center;
+      font-variant: small-caps;
+      font-style: oblique;
+    }
+    #a:hover {
+      font-size: 16px;
+      background-color: yellow;
+    }
+    #b:hover{
+      font-size: 15.1px;
+      background-color:aqua;
+    }
+
+</style>
+
+<body class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="navbar-brand" aria-current="page" href="{% url 'about' %}">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'register' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'contact' %}">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1000">
+        <img src="{% static 'schl.jpg' %}" class="d-block w-100" alt="..." height='400'>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="{% static 'college.jpg' %}" class="d-block w-100" alt="..." height='400'>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="{% static 'bu.jpg' %}" class="d-block w-100" alt="..." height='400'>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <button id="a">Schooling Report Card</button>
+  <button id="b">Graduation Report Card</button>
+  <img src="{% static 'schl.jpg' %}" alt="" class="school" width="100%">
+  <h3 class="p">Report Card</h3>
+  <table class=" table table-bordered border border-secondary school">
+    <thead class="text-primary" >
+      <tr>
+        <th scope="col"><b>Standard</b></th>
+        <th scope="col"><b>Year</b></th>
+        <th scope="col"><b>%/Grade</b></th>
+        <th scope="col"><b>Board</b></th>
+        <th scope="col"><b>City</b></th>
+      </tr>
+    </thead>
+    <tbody class="text-dark">
+      <tr>
+        <td><b>10th</b></td>
+        <td><b>2013</b></td>
+        <td><b>78%</b></td>
+        <td><b>M.P.Board</b></td>
+        <td><b>Bhopal</b></td>
+      </tr>
+      <tr>
+        <td><b>12th</b></td>
+        <td><b>2015</b></td>
+        <td><b>70.6%</b></td>
+        <td><b>M.P.Board</b></td>
+        <td><b>Bhopal</b></td>
+      </tr>
+  </table>
+
+  <img src="{% static 'college.jpg' %}" alt="" class="dj" width="100%" >
+  <h3 class="q">Report Card</h3>
+  <table class=" table table-bordered  border border-secondary dj">
+    <thead class="text-primary">
+      <tr>
+        <th scope="col"><b>Standard</b></th>
+        <th scope="col"><b>Year</b></th>
+        <th scope="col"><b>%/Grade</b></th>
+        <th scope="col"><b>University</b></th>
+        <th scope="col"><b>City</b></th>
+      </tr>
+    </thead>
+    <tbody class="text-dark">
+      <tr>
+        <td><b>B.Sc(SMCs)</b></td>
+        <td><b>2018</b></td>
+        <td><b>58.75</b></td>
+        <td><b>Barkatullah University</b></td>
+        <td><b>Bhopal</b></td>
+      </tr>
+  </table>
+<script>
+  $('#a').click(() => {
+    $('.p').slideToggle()
+    $('.school').slideToggle()
+  })
+  $('#b').click(() => {
+    $('.q').slideToggle()
+    $('.dj').slideToggle()
+  })
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
