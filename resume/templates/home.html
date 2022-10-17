@@ -101,6 +101,27 @@
     .figure{
       justify-content: space-around;
     }
+    .accordion-body{
+      display:grid;
+      grid-template-columns: auto auto;
+      background-color: whitesmoke;     
+      border: 2px solid black;
+     }
+    .vid{
+      background-color: whitesmoke;   
+      height: 400px;
+      width: 500px;
+  }
+  .vi{
+      background-color: whitesmoke;
+      margin-left: 200px;      
+      height: 400px;
+      width: 500px;
+  }
+ #ig{
+  width: 300px;height: 400px;
+  border-radius: 30%;
+ }
     
   </style>
 
@@ -148,10 +169,14 @@
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <figure class="figure">
-            <img src="{% static 'aman.JPG' %}" class="figure-img img-fluid rounded" alt="...">
-            <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
-          </figure>
+          <div class="vid">hellljknkmkwmflkwmfjgkdvvkkswqrfdd vwefkwrwkm,d ddkmsdjkfnkwkfm v sdjfwnfqwqwqomqw
+            efijwemk vm, vjk jdnirjrqkwmfqeoioj jiqjfoifmw qirjjqiirjqw iojopopeqwjwkf fqwejkrn iqw qwi qwirjqoijdqkwlcmqw 
+            wffnqwkfkkvjkfnwejknk vd  jwqoifqkq qwkkffnwqwjk ma  n jwnf s vkhiqfnfwkf  q qwrnkjqw fqw qk rrnqjkrnwe q krmrgee eigmeomggmriire ejimggrigemek igrmvroi irjeir iejtiee tjieie i3rjeoie eiifeirgeioew eiioie eiiteioieww oiej345jrjr849jmfk  nqwjkfnqwejkjf we w.
+        </div>
+        <div class="vi">
+          <img src="{% static 'am.jpg' %}" alt="" width="300" height="300" id="ig" >
+        </div>
+          
         </div>
       </div>
     </div>
@@ -205,7 +230,9 @@
     <img src="{% static 'mysql.png' %}" id="y" alt="" width="300" height="200" class="rounded-circle"
       onmouseover="dun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
     <img src="{% static 'django.png' %}" id="u" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="zun()">
+      onmouseover="zun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+      <img src="{% static 'git.jpg' %}" id="x" alt="" width="300" height="200" class="rounded-circle"
+      onmouseover="bun()">
   </div><br><br><br><br><br>
   <div class="footer">
     <a href="https://www.facebook.com/" id="l"><i class="fa fa-facebook " aria-hidden="true"></i></a>&emsp14;
@@ -256,6 +283,12 @@
       k.transform = 'rotate(360deg)'
       k.transition = 'transform 10s'
       k.border = '5px double aqua'
+    }
+    function bun() {
+      var k = document.getElementById('x').style
+      k.transform = 'rotate(360deg)'
+      k.transition = 'transform 10s'
+      k.border = '5px double orange'
     }
   </script>
 

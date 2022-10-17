@@ -64,18 +64,25 @@
     <h5>Kindly log in here to view secured page</h5><br>
     
     <form action="" method="POST" class="for">
-      <h4>Login Here</h4><br>
-      
+        <h4>Login Here</h4><br>
         <div class="mb-3">
             {% csrf_token %}
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required  autocomplete="off ">
-          <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" onclick="asd()" required autocomplete="off">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-      </form>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" autocomplete="off" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="asd()">
+            <label class="form-check-label" for="exampleCheck1">Show Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+      
+       
     
     {% if messages %}
     {% for i in messages %}

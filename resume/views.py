@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.models import User,auth
-from .models import My
+from .models import My,MediaFile,Style_JS
 
 # Create your views here.
 def home(r):
@@ -9,7 +9,8 @@ def home(r):
 def about(r):
     return render(r,'about.html')
 def secure(r):
-    return render(r,'secure.html')
+    obj=MediaFile.objects.filter(id=1)
+    return render(r,'secure.html',{'video':obj})
 def register(r):
     if r.method=='POST':
         username=r.POST['name']
@@ -21,7 +22,7 @@ def register(r):
             user=User.objects.create_user(username=username,password=pwd)
             user.save()
             messages.info(r,'User created Successfully')
-            return redirect('register')
+            return redirect('login')
     else:
         return render(r,'register.html')
 def login(r):
@@ -54,7 +55,8 @@ def contact(r):
             messages.info(r,'Your Input is Received ,Thanks !')
             return render(r,'contact.html')
     else:
-        return render (r,'contact.html')
+        obj=Style_JS.objects.filter(id=1)
+        return render (r,'contact.html',{"key":obj})
 def data(r):
     if r.method=='POST':
         user=r.POST['name']
