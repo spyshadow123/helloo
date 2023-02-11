@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
+    integrity="sha256-97quMNaesEFsrV6uexbIR3+D1V1+75CVDXuLBFQ07lA=" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/0683059c5b.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .had {
+    padding: 10px;
+    background-image: linear-gradient(#FF9933, #FFFFFF, #138808);
+  }
+
+  .logo {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+    animation: log 2s infinite;
+  }
+
+  @keyframes log {
+    0% {
+      background-image: linear-gradient(yellow, yellowgreen);
+      font-style: italic;
+    }
+  }
+
+
+  .navbar {
+    background-image: linear-gradient(to left bottom, #ff8e5f, #ff8374, #ff7b8d, #ff78a7, #ff7ac2, #fa7cd1, #f27fe0, #e783ef, #d983f4, #cb84f8, #bb85fb, #a986fe);
+  }
+
+  span {
+    color: red;
+  }
+
+  .lin {
+    display: flex;
+    justify-content: right;
+  }
+
+  .lin ul li a {
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    font-style: italic;
+    color: red;
+    background-image: linear-gradient(yellow, yellowgreen);
+    text-transform: uppercase;
+  }
+  /* FOOTER CSS */
+  .footer {
+    padding: 60px 0;
+    background-image: url(../static/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer .social {
+    text-align: center;     
+  }
+
+  .footer .social a {
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    background-color: white;
+  }
+  .footer .social a i{
+    transition: all 0.3s linear;
+  }
+  .footer .social a i:hover{
+    font-size: 40px;
+  }
+  .footer .social a .fa-facebook {
+     color: blue;
+  }
+
+  .footer .social a .fa-instagram {
+   color: rgb(230, 106, 127);
+  }
+
+  .footer .social a .fa-linkedin-in {
+   color: blue;
+  }
+
+  .footer .social a .fa-github {
+   color: black;
+  }
+
+  .footer .social a .fa-telegram {
+      color: rgb(49, 178, 228);
+  }
+
+  .footer ul {
+    margin-top: 40px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .footer ul a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .footer p span {
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  .footer .copyright {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+  }
+
+  .footer ul li button {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px red;
+    transition: all 0.7s linear;
+    background-color: #87e2db;
+  }
+
+  .footer ul li :hover {
+    background-color: rgb(236, 129, 236);
+    font-style: italic;
+    font-weight: bolder;   
+    font-size: 20px;
+    border-radius: 30%;
+  }
+
+</style>
+<body>
+  <header class="had">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="#"> <span id="am">AMAN</span> <span>&#9876;</span> <span
+            id="ra">RAJPUT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse lin" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'about' %}"><i class="fa fa-user-alt"></i> About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'register' %}"><i class="fa fa-register"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'login' %}"><i class="fa fa-unlock"></i> Login</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'contact' %}" ><i class="fa fa-phone"></i> Contact Me
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <h1>Exposure to Following Programming Languages,Libraries and Frameworks and Other Skills</h1>
+  <div class="card-group">
+    <div class="card">
+      <img src="" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="social">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-telegram"></i></a>
+      <a href=""><i class="fa-brands fa-github"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <button><a href="{% url 'home' %}">Home</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'about' %}">About Me</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'register' %}">Register</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'login' %}">Login</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'contact' %}">Contact Me</a></button>
+      </li>
+    </ul>
+    <p><span id="foot"> <i class="fa fa-phone"></i> Contact Me - 8770853282</span> </p>
+    <p><span id="foot"><i class="fa-solid fa-envelope"></i> Email Us - amanrajputbpl1996@gmail.com</span> </p>
+    <p class="copyright">Copyright &COPY; 2022</p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+</html>

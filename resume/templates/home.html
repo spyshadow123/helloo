@@ -2,305 +2,463 @@
 <html lang="en">
 {% load static %}
 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
+    integrity="sha256-97quMNaesEFsrV6uexbIR3+D1V1+75CVDXuLBFQ07lA=" crossorigin="anonymous"></script>
 
-  <style>
-    body {
-      background-color: violet;
-    }
-
-    a:hover {
-      background-color:chartreuse ;
-      font-variant: small-caps;
-      font-style: italic;
-    }
-
-    #a {
-      width: 400px;
-      height: 400px;
-      display: inline-block;
-    }
-
-    #d {
-      width: 400px;
-      height: 400px;
-      display: inline-block;
-    }
-
-    .skill {
-      color: darkmagenta;
-      text-align: center;
-
-    }
-
-    .footer:hover {
-      height: 2cm;
-      width: 100%;
-      background-image: linear-gradient(red,blue,green,yellow);
-    }
-
-    .fa {
-      width: 80px;
-      text-align: center;
-      font-size: 40px;
-      text-decoration: none;
-    }
-
-    .fa-facebook {
-      color: white;
-      background: blue;
-      font-size: 2cm;
-
-    }
-
-    .fa-twitter {
-      color: white;
-      background-color: blue;
-      font-size: 2cm;
-
-    }
-
-    .fa-instagram {
-      color: rgb(246, 25, 55);
-      background-color: whitesmoke;
-      font-size: 2cm;
-
-    }
-
-    #l,
-    #m,
-    #n {
-      margin: 3%;
-    }
-
-    .accordion-collapse:hover {
-      font-variant: small-caps;
-      font-style: italic;
-      background-color: lavenderblush;
-    }
-
-    #rr:hover {
-      border: 10px double rebeccapurple;
-    }
-
-    #h4 {
-      color: darkmagenta;
-      text-align: center;
-      background-color: yellow;
-    }
-    .figure-img {
-      width: 300px;
-    }
-    .figure{
-      justify-content: space-around;
-    }
-    .accordion-body{
-      display:grid;
-      grid-template-columns: auto auto;
-      background-color: whitesmoke;     
-      border: 2px solid black;
-     }
-    .vid{
-      background-color: whitesmoke;   
-      height: 400px;
-      width: 500px;
-  }
-  .vi{
-      background-color: whitesmoke;
-      margin-left: 200px;      
-      height: 400px;
-      width: 500px;
-  }
- #ig{
-  width: 300px;height: 400px;
-  border-radius: 30%;
- }
-    
-  </style>
-
+  <script src="https://kit.fontawesome.com/0683059c5b.js" crossorigin="anonymous"></script>
 </head>
+<style>
+  .had {
+    padding: 10px;
+    background-image: linear-gradient(#FF9933, #FFFFFF, #138808);
+  }
+
+  .logo {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+    animation: log 2s infinite;
+  }
+
+  @keyframes log {
+    0% {
+      background-image: linear-gradient(yellow, yellowgreen);
+      font-style: italic;
+    }
+  }
+
+
+  .navbar {
+    background-image: linear-gradient(to left bottom, #ff8e5f, #ff8374, #ff7b8d, #ff78a7, #ff7ac2, #fa7cd1, #f27fe0, #e783ef, #d983f4, #cb84f8, #bb85fb, #a986fe);
+  }
+
+  span {
+    color: red;
+  }
+
+  .lin {
+    display: flex;
+    justify-content: right;
+  }
+
+  .lin ul li a {
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    font-style: italic;
+    color: red;
+    background-image: linear-gradient(yellow, yellowgreen);
+    text-transform: uppercase;
+  }
+
+  /* CSS for main section */
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 620px;
+    background-image: url(../static/15.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .intro h1 {
+    font-family: sans-serif;
+    font-size: 45px;
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px limegreen;
+    animation: hed 2s infinite;        
+    }
+    @keyframes hed {
+      0%{
+        background-image: linear-gradient( #3dc2e2, #00c3b4, #5abb6a, #a6a81b, #eb8112);
+      }
+    }
+  
+
+  .intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  .intro button a{
+    text-decoration: none;
+  }
+  .intro button {
+    background-color: plum;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px red;
+    animation: bttnn 3s infinite;
+  }
+
+  @keyframes bttnn {
+    0% {
+      text-shadow: 2px 2px red;
+    }
+
+    50% {
+      text-shadow: 2px 2px limegreen;
+    }
+
+    100% {
+      text-shadow: 2px 2px yellow;
+    }
+  }
+
+  .intro button:hover {
+    animation: bttn 3s infinite;
+  }
+
+  @keyframes bttn {
+    0% {
+      box-shadow: 0 0 0 3px aqua;
+    }
+
+    100% {
+      box-shadow: 0 0 0 7px greenyellow;
+    }
+  }
+
+
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 90px;
+    border-top: 2px solid red;
+    background-image: url(../static/5.jpg);
+  }
+
+  .about-me img {
+    width: 400px;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 40%;
+
+  }
+
+
+  .about-me-text h2 {
+    font-size: 50px;
+    color: greenyellow;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px red;
+    text-decoration: underline;
+  }
+
+  .about-me-text p {
+    font-size: 25px;
+    color: #d1d1d1;
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .service {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(../static/1.jpg);
+  }  
+
+  .bad {
+    background-image: linear-gradient(#FF9933,#d983f4,#f27fe0 );  
+  }
+
+  .bod {
+    background-image: linear-gradient(#f27fe0,#d983f4,#FF9933 ); 
+  }
+
+  .card i {
+    font-size: 100px;
+    padding: 20px;
+    
+  }
+
+  .card-group {
+    margin-top: -8px;
+  }
+
+  .card-group>.card {
+    margin-bottom: -0.25rem;
+
+  }
+  #btn{
+    text-shadow: 1px 1px red;
+    background-color: yellow;
+    box-shadow: 2px 2px 0 0 red;
+    font-weight: bolder; 
+    transition: all 0.3s linear; 
+     
+  }
+  #btn:hover{
+    font-size: 20px;
+  }
+ #btn a {
+  text-decoration: none;
+  color: black; 
+ }
+  .card-title {
+    padding: 20px;
+    margin-bottom: 0;
+    background-image: url(../static/17.jpg);
+    font-size: 40px;
+    color: yellow;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px red;    
+
+  }
+
+  /* FOOTER CSS */
+  .footer {
+    padding: 60px 0;
+    background-image: url(../static/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer .social {
+    text-align: center;     
+  }
+
+  .footer .social a {
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    background-color: white;
+  }
+  .footer .social a i{
+    transition: all 0.3s linear;
+  }
+  .footer .social a i:hover{
+    font-size: 40px;
+  }
+  .footer .social a .fa-facebook {
+     color: blue;
+  }
+
+  .footer .social a .fa-instagram {
+   color: rgb(230, 106, 127);
+  }
+
+  .footer .social a .fa-linkedin-in {
+   color: blue;
+  }
+
+  .footer .social a .fa-github {
+   color: black;
+  }
+
+  .footer .social a .fa-telegram {
+      color: rgb(49, 178, 228);
+  }
+
+  .footer ul {
+    margin-top: 40px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .footer ul a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .footer p span {
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  .footer .copyright {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+  }
+
+  .footer ul li button {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px red;
+    transition: all 0.7s linear;
+    background-color: #87e2db;
+  }
+
+  .footer ul li :hover {
+    background-color: rgb(236, 129, 236);
+    font-style: italic;
+    font-weight: bolder;   
+    font-size: 20px;
+    border-radius: 30%;
+  }
+</style>
 
 <body class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-info">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="navbar-brand" aria-current="page" href="{% url 'about' %}">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'register' %}">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'login' %}">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'contact' %}">Contact Me</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <a href="admin/login">ADMIN</a>
-  <h4 id="h4">
-    <marquee behavior="right" direction="alternate" scrollamount="10"><b><i>Welcome to Home Page of My CV</i></b>
-    </marquee>
-  </h4><br>
-  <div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          <b>About MySelf</b>
+  <header class="had">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="#"> <span id="am">AMAN</span> <span>&#9876;</span> <span
+            id="ra">RAJPUT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <div class="vid">hellljknkmkwmflkwmfjgkdvvkkswqrfdd vwefkwrwkm,d ddkmsdjkfnkwkfm v sdjfwnfqwqwqomqw
-            efijwemk vm, vjk jdnirjrqkwmfqeoioj jiqjfoifmw qirjjqiirjqw iojopopeqwjwkf fqwejkrn iqw qwi qwirjqoijdqkwlcmqw 
-            wffnqwkfkkvjkfnwejknk vd  jwqoifqkq qwkkffnwqwjk ma  n jwnf s vkhiqfnfwkf  q qwrnkjqw fqw qk rrnqjkrnwe q krmrgee eigmeomggmriire ejimggrigemek igrmvroi irjeir iejtiee tjieie i3rjeoie eiifeirgeioew eiioie eiiteioieww oiej345jrjr849jmfk  nqwjkfnqwejkjf we w.
+        <div class="collapse navbar-collapse lin" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'about' %}"><i class="fa fa-user-alt"></i> About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'register' %}"><i class="fa fa-register"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'login' %}"><i class="fa fa-unlock"></i> Login</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'contact' %}" ><i class="fa fa-phone"></i> Contact Me
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="vi">
-          <img src="{% static 'am.jpg' %}" alt="" width="300" height="300" id="ig" >
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>A Full Stack Web Developer</h1>
+      <p>I am a web developer and I love to create websites.</p>
+      <button><a href="{% url 'contact' %}">HERE ME</a></button>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>I am a web developer and I love to create websites. I am a very good developer and I am always
+          looking for new projects. I am a very good developer and I am always looking for new projects.
+        </p>
+      </div>
+      <img src="{% static 'am.jpg' %}" alt="">
+    </div>
+  </main>
+  <div class="service">
+    <div class="card-group car">
+      <div class="card mn">
+        <h5 class="card-title">Projects</h5>
+        <div class="card-body bad">
+          <i class="fa-sharp fa-solid fa-briefcase"></i>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
         </div>
-          
+      </div>
+      <div class="card mn">
+        <h5 class="card-title ">Skills</h5>     
+        <div class="card-body bod">
+          <i class="fa-solid fa-gear"></i>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <button id="btn"><a href="{% url 'pre' %}">Click Here </a></button>
         </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          <b>Qualifications</b>
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-          <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled
-          with some actual content.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          <b>Programming And Other Skill</b>
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">You would usually be expected to include all higher and further education. If you
-          have no formal qualifications, focus on your skills, e.g. apprenticeship or traineeships. Once you have
-          covered the technical requirements and any other institute or membership achievements, it’s always a good idea
-          to include language skills (especially for multinationals) and IT skills. As for referees, it is sufficient to
-          mention that these are ‘available on request’.</div>
-      </div>
-    </div>
-  </div><br><br>
-  <h3 class='skill'>
-    <marquee behavior="right" direction="alternate" scrollamount="12"><b><i>Exposure to Following Languages,Libraries
-          and Frameworks</i></b></marquee>
-  </h3><br><br>
-  <div class="mn">
-    <img src="{% static 'web.jpg' %}" id="q" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="fun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-    <img src="{% static 'python.png' %}" id="w" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="sun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-    <img src="{% static 'js.png' %}" id="e" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="nun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-    <img src="{% static 'bootstrap.jpg' %}" id="r" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="mun()">&emsp14;&emsp14;&emsp14;&emsp14;<br><br><br><br><br><br>
-    <img src="{% static 'jquery.jpg' %}" id="t" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="pun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-    <img src="{% static 'mysql.png' %}" id="y" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="dun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-    <img src="{% static 'django.png' %}" id="u" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="zun()">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
-      <img src="{% static 'git.jpg' %}" id="x" alt="" width="300" height="200" class="rounded-circle"
-      onmouseover="bun()">
-  </div><br><br><br><br><br>
-  <div class="footer">
-    <a href="https://www.facebook.com/" id="l"><i class="fa fa-facebook " aria-hidden="true"></i></a>&emsp14;
-    <a href="https://www.instagram.com/" id="m"><i class="fa fa-instagram" aria-hidden="true"></i></a>&emsp14;
-    <a href="https://twitter.com/?lang=en" id="n"><i class="fa fa-twitter" aria-hidden="true"></i></a>
   </div>
-
-  <script>
-    function fun() {
-      var k = document.getElementById('q').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double black'
-    }
-    function sun() {
-      var k = document.getElementById('w').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double red'
-    }
-    function nun() {
-      var k = document.getElementById('e').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double green'
-    }
-    function mun() {
-      var k = document.getElementById('r').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double yellow'
-    }
-    function pun() {
-      var k = document.getElementById('t').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double pink'
-    }
-    function dun() {
-      var k = document.getElementById('y').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double blue'
-      k.borderRadius = '100px 1500px'
-    }
-    function zun() {
-      var k = document.getElementById('u').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double aqua'
-    }
-    function bun() {
-      var k = document.getElementById('x').style
-      k.transform = 'rotate(360deg)'
-      k.transition = 'transform 10s'
-      k.border = '5px double orange'
-    }
-  </script>
+  <footer class="footer">
+    <div class="social">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-telegram"></i></a>
+      <a href=""><i class="fa-brands fa-github"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <button><a href="{% url 'home' %}">Home</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'about' %}">About Me</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'register' %}">Register</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'login' %}">Login</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'contact' %}">Contact Me</a></button>
+      </li>
+    </ul>
+    <p><span id="foot"> <i class="fa fa-phone"></i> Contact Me - 8770853282</span> </p>
+    <p><span id="foot"><i class="fa-solid fa-envelope"></i> Email Us - amanrajputbpl1996@gmail.com</span> </p>
+    <p class="copyright">Copyright &COPY; 2022</p>
+  </footer>
+  
 
 
 
 
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html>    

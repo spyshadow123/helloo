@@ -8,6 +8,8 @@ def home(r):
     return render(r,'home.html')
 def about(r):
     return render(r,'about.html')
+def pre(r):
+    return render(r,'pre.html')
 def secure(r):
     obj=MediaFile.objects.filter(id=1)
     return render(r,'secure.html',{'video':obj})

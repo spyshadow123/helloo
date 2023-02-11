@@ -9,70 +9,251 @@
   <title>Hello</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
+  <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
     integrity="sha256-97quMNaesEFsrV6uexbIR3+D1V1+75CVDXuLBFQ07lA=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0683059c5b.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    a:hover {
-      background-color: chartreuse;
-      font-variant: small-caps;
+  .had {
+    padding: 10px;
+    background-image: linear-gradient(#FF9933, #FFFFFF, #138808);
+  }
+
+  .logo {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+    animation: log 2s infinite;
+  }
+
+  @keyframes log {
+    0% {
+      background-image: linear-gradient(yellow, yellowgreen);
       font-style: italic;
     }
+  }
 
-    body {
-      background-color:violet;
-    }
-    .school,
-    .dj {
-      display: none;
-      border-radius: 25%;
-    }
-    .p,
-    .q{
-      display: none;
-      text-align: center;
-      font-variant: small-caps;
-      font-style: oblique;
-    }
-    #a:hover {
-      font-size: 16px;
-      background-color: yellow;
-    }
-    #b:hover{
-      font-size: 15.1px;
-      background-color:aqua;
-    }
 
+  .navbar {
+    background-image: linear-gradient(to left bottom, #ff8e5f, #ff8374, #ff7b8d, #ff78a7, #ff7ac2, #fa7cd1, #f27fe0, #e783ef, #d983f4, #cb84f8, #bb85fb, #a986fe);
+  }
+
+  span {
+    color: red;
+  }
+
+  .lin {
+    display: flex;
+    justify-content: right;
+  }
+
+  .lin ul li a {
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    font-style: italic;
+    color: red;
+    background-image: linear-gradient(yellow, yellowgreen);
+    text-transform: uppercase;
+  }
+
+  #s {
+    color: yellow;
+  }
+
+  #sp {
+    color: red;
+  }
+
+ 
+
+  body {
+    background-image: url('/static/bodywebp.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .school,
+  .coll {
+    display: none;
+    border-radius: 25%;
+  }
+
+  .p,
+  .q {
+    display: none;
+    text-align: center;
+    font-variant: small-caps;
+    font-style: oblique;
+  }
+
+  #a:hover {
+    font-size: 16px;
+    background-color: yellow;
+  }
+
+  #b:hover {
+    font-size: 15.1px;
+    background-color: aqua;
+  }
+  /* FOOTER CSS */
+  .footer {
+    padding: 60px 0;
+    background-image: url(../static/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer .social {
+    text-align: center;
+    padding-bottom: 45px;
+    color: white;
+  }
+
+  .footer .social a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+  }
+
+  .footer .social a .fa-facebook {
+    color: rgb(5, 5, 255);
+    background-color: white;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+
+  .footer .social a .fa-instagram {
+    color: rgb(239, 8, 247);
+    border-radius: 50%;
+    font-size: 40px;
+  }
+
+  .footer .social a .fa-linkedin-in {
+    color: blue;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+
+  .footer .social a .fa-github {
+    color: white;
+    font-size: 40px;
+    border-radius: 50%;
+
+  }
+
+  .footer .social a .fa-telegram {
+    color: rgb(13, 176, 251);
+    background-color: white;
+    font-size: 40px;
+    border-radius: 50%;
+
+  }
+
+  .footer ul {
+    margin-top: 0px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .footer ul a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .footer p span {
+    color: yellow;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  .footer .copyright {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+  }
+
+  .footer ul li button {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px red;
+  }
+
+  .footer ul li :hover {
+    background-color: aqua;
+    font-style: italic;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
 </style>
 
 <body class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="navbar-brand" aria-current="page" href="{% url 'about' %}">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'register' %}">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'login' %}">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'contact' %}">Contact Me</a>
-          </li>
-        </ul>
+  <header class="had">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="#"> <span id="am">AMAN</span> <span>&#9876;</span> <span
+            id="ra">RAJPUT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse lin" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i>
+                Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'about' %}"><i class="fa fa-user-alt"></i> About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'register' %}"><i class="fa fa-register"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'login' %}"><i class="fa fa-unlock"></i> Login</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="{% url 'contact' %}"><i class="fa fa-phone"></i> Contact Me
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="1000">
@@ -97,9 +278,9 @@
   <button id="a">Schooling Report Card</button>
   <button id="b">Graduation Report Card</button>
   <img src="{% static 'schl.jpg' %}" alt="" class="school" width="100%">
-  <h3 class="p">Report Card</h3>
+  <h3 class="p"> School Report Card</h3>
   <table class=" table table-bordered border border-secondary school">
-    <thead class="text-primary" >
+    <thead class="text-primary">
       <tr>
         <th scope="col"><b>Standard</b></th>
         <th scope="col"><b>Year</b></th>
@@ -123,11 +304,12 @@
         <td><b>M.P.Board</b></td>
         <td><b>Bhopal</b></td>
       </tr>
+    </tbody>
   </table>
 
-  <img src="{% static 'college.jpg' %}" alt="" class="dj" width="100%" >
+  <img src="{% static 'college.jpg' %}" alt="" class="coll" width="100%">
   <h3 class="q">Report Card</h3>
-  <table class=" table table-bordered  border border-secondary dj">
+  <table class=" table table-bordered border border-secondary coll">
     <thead class="text-primary">
       <tr>
         <th scope="col"><b>Standard</b></th>
@@ -141,21 +323,51 @@
       <tr>
         <td><b>B.Sc(SMCs)</b></td>
         <td><b>2018</b></td>
-        <td><b>58.75</b></td>
+        <td><b>58.75%</b></td>
         <td><b>Barkatullah University</b></td>
         <td><b>Bhopal</b></td>
-      </tr>
+      </tr>      
+    </tbody>
   </table>
-<script>
-  $('#a').click(() => {
-    $('.p').slideToggle()
-    $('.school').slideToggle()
-  })
-  $('#b').click(() => {
-    $('.q').slideToggle()
-    $('.dj').slideToggle()
-  })
-</script>
+  <footer class="footer">
+    <div class="social">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-telegram"></i></a>
+      <a href=""><i class="fa-brands fa-github"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <button><a href="{% url 'home' %}">Home</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'about' %}">About Me</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'register' %}">Register</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'login' %}">Login</a></button>
+      </li>
+      <li>
+        <button><a href="{% url 'contact' %}">Contact Me</a></button>
+      </li>
+    </ul>
+    <p><span id="foot"> <i class="fa fa-phone"></i> Contact Me - 8770853282</span> </p>
+    <p><span id="foot"><i class="fa-solid fa-envelope"></i> Email Us - amanrajputbpl1996@gmail.com</span> </p>
+    <p class="copyright">Copyright &COPY; 2022</p>
+  </footer>
+  <script>
+    $('#a').click(() => {
+      $('.p').slideToggle()
+      $('.school').slideToggle()
+    })
+    $('#b').click(() => {
+      $('.q').slideToggle()
+      $('.coll').slideToggle()
+    })
+  </script>
 
 
 

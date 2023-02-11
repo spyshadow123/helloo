@@ -9,19 +9,66 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0683059c5b.js" crossorigin="anonymous"></script>
 
 </head>
 <style>
-    a:hover {
-        background-color: chartreuse;
-        font-variant: small-caps;
+    .had {
+        padding: 10px;
+        background-image: linear-gradient(#FF9933, #FFFFFF, #138808);
+      }
+    
+      .logo {
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgb(0, 0, 0);
+        animation: log 2s infinite;
+      }
+    
+      @keyframes log {
+        0% {
+          background-image: linear-gradient(yellow, yellowgreen);
+          font-style: italic;
+        }
+      }
+    
+    
+      .navbar {
+        background-image: linear-gradient(to left bottom, #ff8e5f, #ff8374, #ff7b8d, #ff78a7, #ff7ac2, #fa7cd1, #f27fe0, #e783ef, #d983f4, #cb84f8, #bb85fb, #a986fe);
+      }
+    
+      span {
+        color: red;
+      }
+    
+      .lin {
+        display: flex;
+        justify-content: right;
+      }
+    
+      .lin ul li a {
+        font-weight: bolder;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    
+      .navbar-nav .nav-item .nav-link {
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0 10px;
+      }
+    
+      .navbar-nav .nav-item .nav-link:hover {
         font-style: italic;
-    }
+        color: red;
+        background-image: linear-gradient(yellow, yellowgreen);
+        text-transform: uppercase;
+      }
 
-    body {
-        background-color: violet;
-    }
-
+    body{
+        background-image: url('/static/bodywebp.webp');background-repeat: no-repeat;background-size: cover;
+      }
+  
 
 
     #aa:hover {
@@ -30,53 +77,176 @@
     }
 
     .for {
-        border: 5px dotted black;
+        border: 5px double black;
     }
+    h3{
+      text-align: center;
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    /* FOOTER CSS */
+  .footer {
+    padding: 60px 0;
+    background-image: url(../static/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer .social {
+    text-align: center;
+    padding-bottom: 45px;
+    color: white;
+  }
+
+  .footer .social a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+  }
+
+  .footer .social a .fa-facebook {
+    color: rgb(5, 5, 255);
+    background-color: white;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+
+  .footer .social a .fa-instagram {
+    color: rgb(239, 8, 247);
+    border-radius: 50%;
+    font-size: 40px;
+  }
+
+  .footer .social a .fa-linkedin-in {
+    color: blue;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+
+  .footer .social a .fa-github {
+    color: white;
+    font-size: 40px;
+    border-radius: 50%;
+
+  }
+
+  .footer .social a .fa-telegram {
+    color: rgb(13, 176, 251);
+    background-color: white;
+    font-size: 40px;
+    border-radius: 50%;
+
+  }
+
+  .footer ul {
+    margin-top: 0px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .footer ul a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .footer p span {
+    color: yellow;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  .footer .copyright {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+  }
+
+  .footer ul li button {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px red;
+  }
+
+  .footer ul li :hover {
+    background-color: aqua;
+    font-style: italic;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
 </style>
 
 <body class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <header class="had">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand logo" href="#"> <span id="am">AMAN</span> <span>&#9876;</span> <span
+                id="ra">RAJPUT</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="navbar-brand" aria-current="page" href="{% url 'about' %}">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="{% url 'register' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="{% url 'contact' %}">Contact Me</a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse lin" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active " aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'about' %}"><i class="fa fa-user-alt"></i> About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'register' %}"><i class="fa fa-register"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'login' %}"><i class="fa fa-unlock"></i> Login</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link " href="{% url 'contact' %}"><i class="fa fa-phone"></i> Contact Me
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
-    </nav>
+          </div>
+        </nav>
+      </header>
 
-    <h5>Kindly register here to view secured page</h5><br>
+    <h3>Kindly register here to view secured page</h3><br>
     <form action="" method="POST" class="for">
-        <h4>Register Here</h4><br>
+        <h3>Register Here</h3><br>
         <div class="mb-3">
             {% csrf_token %}
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label"><b>Email Address</b></label>
             <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off" required>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div id="emailHelp" class="form-text" style="color: black;"><b>We'll never share your email with anyone else.</b></div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
             <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" autocomplete="off" required>
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="ssd()">
-            <label class="form-check-label" for="exampleCheck1">Show Password</label>
+            <label class="form-check-label" for="exampleCheck1"><b>Show Password</b></label>
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
@@ -88,7 +258,35 @@
     {% endfor %}
     {% endif %}
 
-
+    <footer class="footer">
+      <div class="social">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-telegram"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+      </div>
+      <ul class="list">
+        <li>
+          <button><a href="{% url 'home' %}">Home</a></button>
+        </li>
+        <li>
+          <button><a href="{% url 'about' %}">About Me</a></button>
+        </li>
+        <li>
+          <button><a href="{% url 'register' %}">Register</a></button>
+        </li>
+        <li>
+          <button><a href="{% url 'login' %}">Login</a></button>
+        </li>
+        <li>
+          <button><a href="{% url 'contact' %}">Contact Me</a></button>
+        </li>
+      </ul>
+      <p><span id="foot"> <i class="fa fa-phone"></i> Contact Me - 8770853282</span> </p>
+      <p><span id="foot"><i class="fa-solid fa-envelope"></i> Email Us - amanrajputbpl1996@gmail.com</span> </p>
+      <p class="copyright">Copyright &COPY; 2022</p>
+    </footer>
     <script>
         function ssd() {
             var a = document.getElementById('exampleInputPassword1')
