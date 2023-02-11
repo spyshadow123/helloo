@@ -67,6 +67,21 @@
     background-image: linear-gradient(yellow, yellowgreen);
     text-transform: uppercase;
   }
+  .im{
+    height:250px;     
+  }
+  
+.ca{
+  margin-top: 50px;  
+}
+
+h3{
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px  red;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
   /* FOOTER CSS */
   .footer {
     padding: 60px 0;
@@ -172,11 +187,7 @@
     font-size: 20px;
     border-radius: 30%;
   }
-  .im{
-    height:300px;
-    width:300px;
-  }
-
+  
 </style>
 <body>
   <header class="had">
@@ -211,64 +222,69 @@
       </div>
     </nav>
   </header>
-  <h1>Exposure to Following Programming Languages,Libraries and Frameworks and Other Skills</h1>
-  <div class="card-group">
+  <h3>Exposure to Following Programming Languages,Libraries and Frameworks and Other Skills</h3>
+  <div class="card-group ca">
     <div class="card ">
-      <img src="{% static 'web.jpg' %}" class="card-img-top " alt="...">
+      <img src="{% static 'web.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between web pages. A markup language is used to define the text document within the tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text. </p>
       </div>      
     </div>
     <div class="card ">
-      <img src="{% static 'css.png' %}" class="card-img-top" alt="...">
+      <img src="{% static 'css.png' %}" class="card-img-top im" alt="...">
       <div class="card-body ">        
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. In short, you can make your website look however you want. CSS lets developers and designers define how it behaves, including how elements are positioned in the browser.       
+        </p>
       </div>      
     </div>
     <div class="card">
-      <img src="{% static 'js.jpg' %}" class="card-img-top" alt="...">
+      <img src="{% static 'js.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text">JavaScript is a lightweight, cross-platform, and interpreted compiled programming language which is also known as the scripting language for webpages. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments. Javascript is both imperative and declarative type of language. JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of language elements like operators, control structures, and statements. </p>
       </div>      
     </div>
   </div>
   <div class="card-group">
     <div class="card">
-      <img src="{% static 'jquery.jpg' %}" class="card-img-top" alt="...">
+      <img src="{% static 'jquery.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">jQuery is an open source JavaScript library that simplifies the interactions between an HTML/CSS document, or more precisely the Document Object Model (DOM), and JavaScript.
+          Elaborating the terms, jQuery simplifies HTML document traversing and manipulation, browser event handling, DOM animations, Ajax interactions, and cross-browser JavaScript development.</p>
       </div>      
     </div>
     <div class="card">
-      <img src="{% static 'bootstrap.jpg' %}" class="card-img-top" alt="...">
+      <img src="{% static 'bootstrap.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">       
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">Bootstrap is a free and open-source collection of CSS and JavaScript/jQuery code used for creating dynamic websites layout and web applications. Bootstrap is one of the most popular front-end frameworks which has really a nice set of predefined CSS codes. Bootstrap uses different types of classes to make responsive websites. Bootstrap is a framework that is suitable for mobile-friendly web development. it means the code and the template available on bootstrap are applicable to various screen sizes. It is responsive for every screen size. </p>
       </div>      
     </div>
     <div class="card">
-      <img src="{% static 'mysql.png' %}" class="card-img-top" alt="...">
+      <img src="{% static 'mysql.png' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text">MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more.
+          Oracle drives MySQL innovation, delivering new capabilities to power next generation web, cloud, mobile and embedded applications.</p>
       </div>      
     </div>
   </div>
   <div class="card-group">
     <div class="card">
-      <img src="{% static 'py.jpg' %}" class="card-img-top" alt="...">
+      <img src="{% static 'py.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.
+        Python is a programming language that lets you work quickly and integrate systems more efficiently.</p>
       </div>      
     </div>
     <div class="card">
-      <img src="{% static 'django.png' %}" class="card-img-top" alt="...">
+      <img src="{% static 'django.png' %}" class="card-img-top im" alt="...">
       <div class="card-body">        
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">Django is a Python-based web framework which allows you to quickly create web application without all of the installation or dependency problems that you normally will find with other frameworks.
+          When you’re building a website, you always need a similar set of components: a way to handle user authentication (signing up, signing in, signing out), a management panel for your website, forms, a way to upload files, etc. Django gives you ready-made components to use.</p>
       </div>      
     </div>
     <div class="card">
-      <img src="{% static 'git.jpg' %}" class="card-img-top" alt="...">
+      <img src="{% static 'git.jpg' %}" class="card-img-top im" alt="...">
       <div class="card-body">       
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text">GitHub, is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. </p>
       </div>      
     </div>
   </div>
