@@ -16,47 +16,41 @@
       padding: 10px;
       background-image: linear-gradient(#FF9933, #FFFFFF, #138808);
     }
-  
+
     .logo {
-      font-size: 30px;
+      font-size: 20px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       background-color: rgb(0, 0, 0);
-      animation: log 2s infinite;
+
     }
-  
-    @keyframes log {
-      0% {
-        background-image: linear-gradient(yellow, yellowgreen);
-        font-style: italic;
-      }
-    }
-  
-  
+
+
+
     .navbar {
       background-image: linear-gradient(to left bottom, #ff8e5f, #ff8374, #ff7b8d, #ff78a7, #ff7ac2, #fa7cd1, #f27fe0, #e783ef, #d983f4, #cb84f8, #bb85fb, #a986fe);
     }
-  
+
     span {
       color: red;
     }
-  
+
     .lin {
       display: flex;
       justify-content: right;
     }
-  
+
     .lin ul li a {
       font-weight: bolder;
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
-  
+
     .navbar-nav .nav-item .nav-link {
       color: black;
       font-weight: bold;
       font-size: 20px;
       padding: 0 10px;
     }
-  
+
     .navbar-nav .nav-item .nav-link:hover {
       font-style: italic;
       color: red;
@@ -66,14 +60,10 @@
 
 
 
-        
+
     body{
-      background-image: url('/static/bodywebp.webp');background-repeat: no-repeat;background-size: cover;
+       background-image: linear-gradient(pink,rgb(238, 90, 90),yellow);
     }
-
-
-  
-
 
     #msg {
       padding-top: 15px;
@@ -93,7 +83,7 @@
 
     .for {
       border: 5px double black;
-      
+
     }
 
     iframe {
@@ -110,9 +100,9 @@
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       font-style: italic;
     }
-   
 
-    
+
+
     /* FOOTER CSS */
   .footer {
     padding: 60px 0;
@@ -123,59 +113,52 @@
 
   .footer .social {
     text-align: center;
-    padding-bottom: 45px;
-    color: white;
   }
 
   .footer .social a {
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
+    font-size: 30px;
     display: inline-block;
     text-align: center;
     margin: 0 8px;
-  }
-
-  .footer .social a .fa-facebook {
-    color: rgb(5, 5, 255);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    line-height: 50px;
     background-color: white;
+  }
+  .footer .social a i{
+    transition: all 0.3s linear;
+  }
+  .footer .social a i:hover{
     font-size: 40px;
-    border-radius: 50%;
+  }
+  .footer .social a .fa-facebook {
+     color: blue;
   }
 
   .footer .social a .fa-instagram {
-    color: rgb(239, 8, 247);
-    border-radius: 50%;
-    font-size: 40px;
+   color: rgb(230, 106, 127);
   }
 
   .footer .social a .fa-linkedin-in {
-    color: blue;
-    font-size: 40px;
-    border-radius: 50%;
+   color: blue;
   }
 
   .footer .social a .fa-github {
-    color: white;
-    font-size: 40px;
-    border-radius: 50%;
-
+   color: black;
   }
 
   .footer .social a .fa-telegram {
-    color: rgb(13, 176, 251);
-    background-color: white;
-    font-size: 40px;
-    border-radius: 50%;
-
+      color: rgb(49, 178, 228);
   }
 
+
   .footer ul {
-    margin-top: 0px;
+    margin-top: 40px;
     padding: 0;
     list-style: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
     margin-bottom: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -195,7 +178,7 @@
   .footer p span {
     color: yellow;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .footer ul li {
@@ -211,29 +194,32 @@
     color: yellow;
   }
 
-  .footer ul li button {
+   .footer ul li button {
     padding: 10px;
     margin-top: 10px;
     box-shadow: 3px 3px red;
+    transition: all 0.7s linear;
+    background-color: #87e2db;
   }
 
   .footer ul li :hover {
-    background-color: aqua;
+    background-color: rgb(236, 129, 236);
     font-style: italic;
     font-weight: bolder;
-    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 30%;
   }
 
   </style>
-  {% endfor %}  
+  {% endfor %}
 </head>
 
 
-<body class="container-fluid">  
+<body class="container-fluid">
   <header class="had">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand logo" href="#"> <span id="am">AMAN</span> <span>&#9876;</span> <span
+        <a class="navbar-brand logo" href="{% url 'home' %}"> <span id="am">AMAN</span> <span>&#9876;</span> <span
             id="ra">RAJPUT</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -262,7 +248,7 @@
       </div>
     </nav>
   </header>
-  <h3> Kindly Provide Your Input Here</h3>
+  <h3> Kindly Provide Your Input Here</h3><br>
   <form action=" " method="POST" class="for">
     <h3 >Contact Us</h3><br>
     {% csrf_token %}
@@ -282,7 +268,7 @@
         autocomplete="off" required>
     </div>
     <div>
-      <label for="exampleInputPassword1" class="form-label"><b>Message</b></label>
+      <label for="exampleInputPassword1" class="form-label"><b>Message</b></label><br>
       <textarea class="form-control" id="zx" name="message" placeholder="Message"></textarea>
     </div><br>
     <button type="submit" class="btn btn-primary" style="width:200px;">Submit</button>
@@ -300,17 +286,17 @@
       Bhopal,(M.P.)
       </pre><br>
 
- 
+
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458.4420231113853!2d77.41669521494887!3d23.187122417164975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x879ffa659ae20132!2sKhatu%20Shyamji%20Baba%20Temple!5e0!3m2!1sen!2sin!4v1662464196756!5m2!1sen!2sin"
     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer class="footer">
       <div class="social">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100012689899358"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/spy_shadow14/"><i class="fa-brands fa-instagram"></i></a>
         <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href=""><i class="fa-brands fa-telegram"></i></a>
-        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href="https://web.telegram.org/z/#-1270394791"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://github.com/spyshadow123"><i class="fa-brands fa-github"></i></a>
       </div>
       <ul class="list">
         <li>

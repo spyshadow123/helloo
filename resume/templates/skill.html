@@ -22,18 +22,13 @@
   }
 
   .logo {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(0, 0, 0);
-    animation: log 2s infinite;
+
   }
 
-  @keyframes log {
-    0% {
-      background-image: linear-gradient(yellow, yellowgreen);
-      font-style: italic;
-    }
-  }
+
 
 
   .navbar {
@@ -68,11 +63,11 @@
     text-transform: uppercase;
   }
   .im{
-    height:250px;     
+    height:250px;
   }
-  
+
 .ca{
-  margin-top: 50px;  
+  margin-top: 50px;
 }
 
 h3{
@@ -82,7 +77,9 @@ h3{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
 }
-  /* FOOTER CSS */
+
+
+/* FOOTER CSS */
   .footer {
     padding: 60px 0;
     background-image: url(../static/4.jpg);
@@ -91,7 +88,7 @@ h3{
   }
 
   .footer .social {
-    text-align: center;     
+    text-align: center;
   }
 
   .footer .social a {
@@ -136,7 +133,7 @@ h3{
     padding: 0;
     list-style: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
     margin-bottom: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -183,11 +180,10 @@ h3{
   .footer ul li :hover {
     background-color: rgb(236, 129, 236);
     font-style: italic;
-    font-weight: bolder;   
+    font-weight: bolder;
     font-size: 20px;
     border-radius: 30%;
   }
-  
 </style>
 <body>
   <header class="had">
@@ -226,75 +222,75 @@ h3{
   <div class="card-group ca">
     <div class="card ">
       <img src="{% static 'web.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between web pages. A markup language is used to define the text document within the tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text. </p>
-      </div>      
+      </div>
     </div>
     <div class="card ">
       <img src="{% static 'css.png' %}" class="card-img-top im" alt="...">
-      <div class="card-body ">        
-        <p class="card-text">Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. In short, you can make your website look however you want. CSS lets developers and designers define how it behaves, including how elements are positioned in the browser.       
+      <div class="card-body ">
+        <p class="card-text">Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. In short, you can make your website look however you want. CSS lets developers and designers define how it behaves, including how elements are positioned in the browser.
         </p>
-      </div>      
+      </div>
     </div>
     <div class="card">
       <img src="{% static 'js.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">JavaScript is a lightweight, cross-platform, and interpreted compiled programming language which is also known as the scripting language for webpages. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments. Javascript is both imperative and declarative type of language. JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of language elements like operators, control structures, and statements. </p>
-      </div>      
+      </div>
     </div>
   </div>
   <div class="card-group">
     <div class="card">
       <img src="{% static 'jquery.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">jQuery is an open source JavaScript library that simplifies the interactions between an HTML/CSS document, or more precisely the Document Object Model (DOM), and JavaScript.
           Elaborating the terms, jQuery simplifies HTML document traversing and manipulation, browser event handling, DOM animations, Ajax interactions, and cross-browser JavaScript development.</p>
-      </div>      
+      </div>
     </div>
     <div class="card">
       <img src="{% static 'bootstrap.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">       
+      <div class="card-body">
         <p class="card-text">Bootstrap is a free and open-source collection of CSS and JavaScript/jQuery code used for creating dynamic websites layout and web applications. Bootstrap is one of the most popular front-end frameworks which has really a nice set of predefined CSS codes. Bootstrap uses different types of classes to make responsive websites. Bootstrap is a framework that is suitable for mobile-friendly web development. it means the code and the template available on bootstrap are applicable to various screen sizes. It is responsive for every screen size. </p>
-      </div>      
+      </div>
     </div>
     <div class="card">
       <img src="{% static 'mysql.png' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more.
           Oracle drives MySQL innovation, delivering new capabilities to power next generation web, cloud, mobile and embedded applications.</p>
-      </div>      
+      </div>
     </div>
   </div>
   <div class="card-group">
     <div class="card">
       <img src="{% static 'py.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.
         Python is a programming language that lets you work quickly and integrate systems more efficiently.</p>
-      </div>      
+      </div>
     </div>
     <div class="card">
       <img src="{% static 'django.png' %}" class="card-img-top im" alt="...">
-      <div class="card-body">        
+      <div class="card-body">
         <p class="card-text">Django is a Python-based web framework which allows you to quickly create web application without all of the installation or dependency problems that you normally will find with other frameworks.
           When you’re building a website, you always need a similar set of components: a way to handle user authentication (signing up, signing in, signing out), a management panel for your website, forms, a way to upload files, etc. Django gives you ready-made components to use.</p>
-      </div>      
+      </div>
     </div>
     <div class="card">
       <img src="{% static 'git.jpg' %}" class="card-img-top im" alt="...">
-      <div class="card-body">       
+      <div class="card-body">
         <p class="card-text">GitHub, is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. </p>
-      </div>      
+      </div>
     </div>
   </div>
   <footer class="footer">
     <div class="social">
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100012689899358"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/spy_shadow14/"><i class="fa-brands fa-instagram"></i></a>
       <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href=""><i class="fa-brands fa-telegram"></i></a>
-      <a href=""><i class="fa-brands fa-github"></i></a>
+      <a href="https://web.telegram.org/z/#-1270394791"><i class="fa-brands fa-telegram"></i></a>
+      <a href="https://github.com/spyshadow123"><i class="fa-brands fa-github"></i></a>
     </div>
     <ul class="list">
       <li>
@@ -317,6 +313,7 @@ h3{
     <p><span id="foot"><i class="fa-solid fa-envelope"></i> Email Us - amanrajputbpl1996@gmail.com</span> </p>
     <p class="copyright">Copyright &COPY; 2022</p>
   </footer>
+
 
 
 
